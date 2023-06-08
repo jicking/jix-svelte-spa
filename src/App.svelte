@@ -23,10 +23,8 @@
   };
 </script>
 
-<div class="page-root app">
-  <Header />
-  <main>
-    <Router {routes} />
-  </main>
-  <footer>@Footer</footer>
-</div>
+<Header />
+<main>
+  <Router {routes} />
+</main>
+<footer>@Footer</footer>

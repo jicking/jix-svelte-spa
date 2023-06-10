@@ -3,6 +3,7 @@
   import Index from "./routes/Index.svelte";
   import About from "./routes/About.svelte";
   import NotFound from "./routes/NotFound.svelte";
+  import Login from "./routes/Login.svelte";
   import Router from "svelte-spa-router";
 
   const routes = {
@@ -15,7 +16,9 @@
     // Wildcard parameter
     //'/book/*': Book,
 
+    // No param pages
     "/about": About,
+    "/login": Login,
 
     // Catch-all
     // This is optional, but if present it must be the last
@@ -27,4 +30,4 @@
 <main>
   <Router {routes} />
 </main>
-<footer>@Footer</footer>
+<footer><small>Crafted by @jicking</small></footer>

@@ -1,6 +1,17 @@
 <script lang="ts">
   import { link } from "svelte-spa-router";
-  import active from 'svelte-spa-router/active'
+  import active from "svelte-spa-router/active";
+  import { userAuth } from "../store/store";
+  import { push } from "svelte-spa-router";
+
+  const handleClickLogin = () => {
+    userAuth.clear();
+    push("/login");
+  };
+  const handleClickLogout = () => {
+    userAuth.clear();
+    push("/login");
+  };
 </script>
 
 <header>
@@ -15,7 +26,13 @@
     </nav>
   </div>
   <div>
-    <button>Login</button>
+    {#if $userAuth}
+      <!-- <span><a href="/account" use:link>{$userAuth.username}</a></span> -->
+      <span><small>{$userAuth.username}</small></span>
+      <button on:click={handleClickLogout}>Logout</button>
+    {:else}
+      <button on:click={handleClickLogin}>Login</button>
+    {/if}
   </div>
 </header>
 

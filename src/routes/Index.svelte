@@ -4,4 +4,4 @@
 </script>
 
 <h1>Home</h1>
-<Counter />
+<p>A simple Svelte SPA template when SvelteKit is just overkill to use.</p>

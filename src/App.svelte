@@ -6,6 +6,8 @@
   import Login from "./routes/Login.svelte";
   import Router from "svelte-spa-router";
 
+  const envName = import.meta.env.VITE_ENV;
+
   const routes = {
     // Exact path
     "/": Index,
@@ -30,4 +32,4 @@
 <main>
   <Router {routes} />
 </main>
-<footer><small>Crafted by @jicking</small></footer>
+<footer><small>ENV: {envName}</small></footer>

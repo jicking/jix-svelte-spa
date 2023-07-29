@@ -8,7 +8,7 @@
     email,
     required,
   } from "svelte-use-form";
-  import { userAuth } from "../store";
+  import { userAuth } from "../../store";
   import { onMount } from "svelte";
 
   const form = useForm();

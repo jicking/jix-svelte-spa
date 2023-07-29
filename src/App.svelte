@@ -3,7 +3,8 @@
   import Index from "./routes/Index.svelte";
   import About from "./routes/About.svelte";
   import NotFound from "./routes/NotFound.svelte";
-  import Login from "./routes/Login.svelte";
+  import Login from "./routes/account/Login.svelte";
+  import Profile from "./routes/account/Profile.svelte";
   import Router from "svelte-spa-router";
 
   const envName = import.meta.env.VITE_ENV;
@@ -20,7 +21,8 @@
 
     // No param pages
     "/about": About,
-    "/login": Login,
+    "/account/login": Login,
+    "/account/profile": Profile,
 
     // Catch-all
     // This is optional, but if present it must be the last

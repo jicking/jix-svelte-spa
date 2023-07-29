@@ -6,11 +6,11 @@
 
   const handleClickLogin = () => {
     userAuth.clear();
-    push("/login");
+    push("/account/login");
   };
   const handleClickLogout = () => {
     userAuth.clear();
-    push("/login");
+    push("/account/login");
   };
 </script>
 
@@ -27,8 +27,8 @@
   </div>
   <div>
     {#if $userAuth}
-      <!-- <span><a href="/account" use:link>{$userAuth.username}</a></span> -->
-      <span><small>{$userAuth.username}</small></span>
+      <span><a href="/account/profile" use:link>{$userAuth.username}</a></span>
+      <!-- <span><small>{$userAuth.username}</small></span> -->
       <button on:click={handleClickLogout}>Logout</button>
     {:else}
       <button on:click={handleClickLogin}>Login</button>

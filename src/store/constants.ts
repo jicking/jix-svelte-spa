@@ -1,4 +1,4 @@
-import type { Todo } from './store.schema';
+import type { Todo } from './schema';
 
 export const STORE_DEFAULT_TODOS: Todo[] = [
 	{

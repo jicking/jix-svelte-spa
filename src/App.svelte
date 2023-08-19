@@ -11,16 +11,13 @@
   const envName = import.meta.env.VITE_ENV;
 
   const routes = {
-    // Exact path
-    "/": Index,
-
     // Using named parameters, with last being optional
     //'/author/:first/:last?': Author,
 
     // Wildcard parameter
     //'/book/*': Book,
 
-    // No param pages
+    "/": Index,
     "/about": About,
     "/account/login": Login,
     "/account/profile": Profile,
@@ -41,7 +38,7 @@
 </div>
 
 <style lang="scss">
-  @import "./app-tokens.scss";
+  @use "./app-tokens.scss" as *;
 
   .page-root {
     min-height: 100vh;
@@ -49,18 +46,9 @@
     flex-flow: column;
   }
 
-  button {
-    padding: 8px;
-    margin-right: 8px;
-  }
-
   main {
     padding: 1rem;
     flex: 1;
-
-    .container {
-      max-width: $content-width-max;
-    }
   }
 
   footer {

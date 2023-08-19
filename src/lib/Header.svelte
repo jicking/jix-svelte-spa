@@ -37,9 +37,8 @@
 </header>
 
 <style lang="scss">
-  @import '../app-tokens.scss';
+  @use '../app-tokens.scss' as *;
   $color: red;
-  
 
   header {
     background-color: $color-bg;

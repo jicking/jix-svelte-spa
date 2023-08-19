@@ -1,0 +1,2 @@
+export const APP_NAME = 'BRAND'
+export const APP_DESCRIPTION = "BRAND DESCRIPTION";

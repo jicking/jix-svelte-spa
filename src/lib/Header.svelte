@@ -37,9 +37,13 @@
 </header>
 
 <style lang="scss">
+  @import '../app-tokens.scss';
   $color: red;
+  
 
   header {
+    background-color: $color-bg;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

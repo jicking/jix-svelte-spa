@@ -5,15 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "dev:staging": "vite --mode staging",
-    "dev:production": "vite --mode production",
     "build": "vite build",
-    "build:staging": "vite build --mode staging",
     "build:production": "vite build --mode production",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest",
+		"teste2e": "playwright test",
+		"teste2e:ui": "playwright test --ui"
   },
   "devDependencies": {
+    "@playwright/test": "^1.37.1",
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
     "@tsconfig/svelte": "^4.0.1",
     "sass": "^1.63.2",

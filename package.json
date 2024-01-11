@@ -10,11 +10,10 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest",
-		"teste2e": "playwright test",
-		"teste2e:ui": "playwright test --ui"
+    "test-e2e": "playwright test"
   },
   "devDependencies": {
-    "@playwright/test": "^1.37.1",
+    "@playwright/test": "^1.40.1",
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
     "@tsconfig/svelte": "^4.0.1",
     "sass": "^1.63.2",

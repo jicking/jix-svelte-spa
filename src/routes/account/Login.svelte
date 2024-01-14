@@ -29,9 +29,11 @@
 </script>
 
 <h1>Login</h1>
-<form use:form on:submit|preventDefault={handleSubmit}>
-  <label for="email"><b>Email</b></label>
+
+<form class="form" use:form on:submit|preventDefault={handleSubmit}>
+  <label for="email">Email</label>
   <input
+    id="email"
     type="email"
     name="email"
     use:validators={[required, email]}
@@ -42,14 +44,17 @@
     <Hint on="email" hideWhenRequired>Email is not valid</Hint>
   </HintGroup>
 
-  <br />
-  <label for="password"><b>Password</b></label>
-  <input type="password" name="password" use:validators={[required]} required />
+  <label for="password">Password</label>
+  <input
+    id="password"
+    type="password"
+    name="password"
+    use:validators={[required]}
+    required
+  />
   <Hint for="password" on="required">This is a mandatory field</Hint>
 
-  <br />
-
-  <button disabled={!$form.valid}>Login</button>
+  <input class="m-top" type="submit" value="Submit" disabled={!$form.valid} />
 </form>
 
 <!-- <pre>
@@ -60,5 +65,15 @@
   :global(.touched:invalid) {
     border-color: red;
     outline-color: red;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+  }
+
+  .m-top {
+    margin-top: 12px;
   }
 </style>
